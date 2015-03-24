@@ -76,8 +76,14 @@ class RockPaperScissorsViewController: UIViewController {
     }
    
     @IBAction func showHistory(sender: AnyObject) {
-      //TODO: Present HistoryViewController
 
+        var historyVC: HistoryViewController
+        
+        historyVC = self.storyboard?.instantiateViewControllerWithIdentifier("HistoryViewController") as HistoryViewController
+        
+        historyVC.history = self.history
+        
+        self.presentViewController(historyVC, animated: true, completion: nil)
     }
     
 }
