@@ -31,10 +31,29 @@ class HistoryViewController: UIViewController, UITableViewDelegate ,UITableViewD
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
+        var cell = tableView.dequeueReusableCellWithIdentifier("historyCell") as UITableViewCell
+        var match = self.history[indexPath.row]
         
-        return UITableViewCell()
+        cell.textLabel?.text = self.resultString(match)
+        cell.detailTextLabel?.text = "\(match.p1) vs \(match.p2)"
         
+        return cell
     }
+    
+    
+    // Result string function
+    func resultString(match: RPSMatch) -> String {
+        
+        // Handle the tie
+        if match.p1 == match.p2 {
+            return "It's a tie!"
+        } else {
+            return match.p1.defeats(match.p2) ? "You Win!" : "You Lose!"
+        }
+
+    }
+    
     
     // Dismiss view controller
     @IBAction func dismisView(sender: UIButton) {
