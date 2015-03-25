@@ -38,6 +38,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate ,UITableViewD
         cell.titleLabel.text = self.resultString(match)
         cell.p1Figure.image = self.imageForMatch(match.p1)
         cell.p2Figure.image = self.imageForMatch(match.p2)
+        cell.backgroundColor = self.cellBgColor(match)
 
         return cell
     }
@@ -70,6 +71,18 @@ class HistoryViewController: UIViewController, UITableViewDelegate ,UITableViewD
         
         return UIImage(named: name)!
     }
+    
+    
+    func cellBgColor(match: RPSMatch) -> UIColor {
+        if match.p1.defeats(match.p2) {
+            return UIColor(red:0.8, green:0.933, blue:0.741, alpha:1)
+        } else if match.p2.defeats(match.p1) {
+            return UIColor(red:1, green:0.854, blue:0.87, alpha:1)
+        } else {
+            return UIColor.whiteColor()
+        }
+    }
+    
     
     
     // Dismiss view controller
