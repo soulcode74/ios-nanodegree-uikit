@@ -106,13 +106,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbB-NM-7wk">
-                                <rect key="frame" x="107" y="42" width="106" height="21"/>
+                                <rect key="frame" x="107.5" y="41" width="105.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="FHE-Yf-O8h">
-                                <rect key="frame" x="0.0" y="85" width="320" height="425"/>
+                                <rect key="frame" x="0.0" y="83.5" width="320" height="426.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="historyCell" rowHeight="60" id="5Kf-vb-llm" customClass="HistoryTableViewCell" customModule="RockPaperScissors" customModuleProvider="target">
@@ -179,7 +179,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="CQC-hY-CM8" secondAttribute="centerX" id="5cT-cM-021"/>
-                            <constraint firstItem="DbB-NM-7wk" firstAttribute="top" secondItem="sNI-gM-RXH" secondAttribute="bottom" constant="22" id="A1A-b0-oWT"/>
+                            <constraint firstItem="DbB-NM-7wk" firstAttribute="top" secondItem="sNI-gM-RXH" secondAttribute="bottom" constant="21" id="A1A-b0-oWT"/>
                             <constraint firstItem="CQC-hY-CM8" firstAttribute="top" secondItem="FHE-Yf-O8h" secondAttribute="bottom" constant="8.5" id="HbQ-Xg-ide"/>
                             <constraint firstItem="FHE-Yf-O8h" firstAttribute="leading" secondItem="Jsa-0l-pHF" secondAttribute="leadingMargin" constant="-16" id="Jb9-70-QSO"/>
                             <constraint firstAttribute="centerX" secondItem="DbB-NM-7wk" secondAttribute="centerX" id="XfA-KJ-N5i"/>
