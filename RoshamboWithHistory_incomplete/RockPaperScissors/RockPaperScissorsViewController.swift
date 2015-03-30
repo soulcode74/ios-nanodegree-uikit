@@ -54,14 +54,12 @@ class RockPaperScissorsViewController: UIViewController {
         // 1st Way: Programmatic View Controller Presentation
 
         if (playersMove == RPS.Rock) {
-            
-        let resultVC = ResultViewController()
         
-        resultVC.match = self.match
+            var storyboard = UIStoryboard(name: "Main", bundle: nil)
+            var controller = storyboard.instantiateViewControllerWithIdentifier("ResultViewController") as ResultViewController
             
-        self.navigationController.pushViewController(resultVC, animated: true)
-            
-        
+            controller.match = self.match
+            self.navigationController?.pushViewController(controller, animated: true)
 
         }
         
