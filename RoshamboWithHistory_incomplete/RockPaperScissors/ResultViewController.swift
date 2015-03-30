@@ -39,7 +39,7 @@ class ResultViewController: UIViewController {
     
     @IBAction func playAgainButtonPressed(sender: AnyObject)
     {
-        dismissViewControllerAnimated(true, completion: nil)
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
     func messageForMatch(match: RPSMatch) -> String {
