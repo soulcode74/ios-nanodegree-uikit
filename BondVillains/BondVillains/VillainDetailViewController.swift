@@ -13,16 +13,14 @@ class VillainDetailViewController: UIViewController {
     
     var villain:Villain!
     
-    @IBOutlet var imageDetail: UIImageView!
-    @IBOutlet var labelDetail: UILabel!
     
-    
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var faceImage: UIImageView!
     
     override func viewWillAppear(animated: Bool) {
-        self.viewWillAppear(true)
-        
-        self.imageDetail.image = UIImage(named: self.villain.imageName)
-        self.labelDetail.text = self.villain.name
+
+        self.nameLabel.text = self.villain.name
+        self.faceImage.image = UIImage(named: self.villain.name)
 
     }
     

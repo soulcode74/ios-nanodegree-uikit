@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lPA-QP-RAQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lPA-QP-RAQ">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -47,6 +47,7 @@
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="B3Y-Cw-dcc"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="Tc1-fa-0bM"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -73,8 +74,15 @@
                         <viewControllerLayoutGuide type="bottom" id="Gth-09-gGV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="a25-Fh-Plq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aao-mH-p5X">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iXG-MF-96E">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <constraints>
@@ -94,48 +102,42 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aao-mH-p5X">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="iXG-MF-96E" secondAttribute="centerY" constant="74" id="GMj-kk-3WG"/>
                             <constraint firstAttribute="centerX" secondItem="iXG-MF-96E" secondAttribute="centerX" id="IGC-Dg-QKb"/>
                             <constraint firstAttribute="centerY" secondItem="Aao-mH-p5X" secondAttribute="centerY" constant="0.5" id="NQy-f0-7dt"/>
                             <constraint firstAttribute="centerX" secondItem="Aao-mH-p5X" secondAttribute="centerX" id="lul-Ar-zfE"/>
+                            <constraint firstItem="iXG-MF-96E" firstAttribute="top" secondItem="lM4-0r-8hL" secondAttribute="bottom" constant="166" id="rol-6O-OO9"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="iXG-MF-96E"/>
                                 <exclude reference="Aao-mH-p5X"/>
+                                <exclude reference="iXG-MF-96E"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="GMj-kk-3WG"/>
                                 <exclude reference="IGC-Dg-QKb"/>
+                                <exclude reference="rol-6O-OO9"/>
                                 <exclude reference="NQy-f0-7dt"/>
                                 <exclude reference="lul-Ar-zfE"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="iXG-MF-96E"/>
                                 <include reference="Aao-mH-p5X"/>
+                                <include reference="iXG-MF-96E"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="GMj-kk-3WG"/>
                                 <include reference="IGC-Dg-QKb"/>
+                                <include reference="rol-6O-OO9"/>
                                 <include reference="NQy-f0-7dt"/>
                                 <include reference="lul-Ar-zfE"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="image" destination="iXG-MF-96E" id="3I4-TZ-b2W"/>
-                        <outlet property="label" destination="Aao-mH-p5X" id="IKp-ht-R3D"/>
+                        <outlet property="faceImage" destination="iXG-MF-96E" id="yLh-do-QFv"/>
+                        <outlet property="nameLabel" destination="Aao-mH-p5X" id="UCx-Yf-mhR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9M-sG-DhC" userLabel="First Responder" sceneMemberID="firstResponder"/>
