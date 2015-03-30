@@ -47,16 +47,22 @@ class RockPaperScissorsViewController: UIViewController {
         history.append(match)
         
         //Here are the 3 ways of presenting a View Controller
+  
+
+        
         
         // 1st Way: Programmatic View Controller Presentation
+
         if (playersMove == RPS.Rock) {
-            // Get the storyboard and ResultViewController
-            var storyboard = UIStoryboard (name: "Main", bundle: nil)
-            var resultVC = storyboard.instantiateViewControllerWithIdentifier("ResultViewController") as ResultViewController
+            
+        let resultVC = ResultViewController()
         
-            // Communicate the match
-            resultVC.match = self.match
-            self.presentViewController(resultVC, animated: true, completion: nil)
+        resultVC.match = self.match
+            
+        self.navigationController.pushViewController(resultVC, animated: true)
+            
+        
+
         }
         
         // 2nd Way: Code plus Segue
