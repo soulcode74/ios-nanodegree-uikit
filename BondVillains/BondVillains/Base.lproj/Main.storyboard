@@ -116,10 +116,10 @@
                                 <exclude reference="iXG-MF-96E"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="IGC-Dg-QKb"/>
-                                <exclude reference="rol-6O-OO9"/>
                                 <exclude reference="NQy-f0-7dt"/>
                                 <exclude reference="lul-Ar-zfE"/>
+                                <exclude reference="IGC-Dg-QKb"/>
+                                <exclude reference="rol-6O-OO9"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -128,10 +128,10 @@
                                 <include reference="iXG-MF-96E"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="IGC-Dg-QKb"/>
-                                <include reference="rol-6O-OO9"/>
                                 <include reference="NQy-f0-7dt"/>
                                 <include reference="lul-Ar-zfE"/>
+                                <include reference="IGC-Dg-QKb"/>
+                                <include reference="rol-6O-OO9"/>
                             </mask>
                         </variation>
                     </view>

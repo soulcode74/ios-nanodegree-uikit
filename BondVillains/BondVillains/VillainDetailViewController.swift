@@ -20,7 +20,8 @@ class VillainDetailViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
 
         self.nameLabel.text = self.villain.name
-        self.faceImage.image = UIImage(named: self.villain.name)
+        var theimage = UIImage(named: self.villain.imageName)
+        self.faceImage.image = theimage
 
     }
     
