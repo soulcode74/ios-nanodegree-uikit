@@ -37,14 +37,18 @@ class StoryNodeViewController: UIViewController, UITableViewDelegate, UITableVie
     
         func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-            let selectedNode = self.storyNode.storyNodeForIndex(indexPath.row)
+            // Selected node prompt
+            let selectedNode = storyNode.storyNodeForIndex(indexPath.row)
             
-            
+            // Create a new instance of StoryNodeViewController
             let nodeController = self.storyboard?.instantiateViewControllerWithIdentifier("StoryNodeViewController") as StoryNodeViewController
             
+            // Set the story node of the next view controller to the selected node
+            nodeController.storyNode = selectedNode
             
+            // Push the new view controller            
             self.navigationController?.pushViewController(nodeController, animated: true)
-    
+            
     }
     
     
