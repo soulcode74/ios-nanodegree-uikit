@@ -30,8 +30,7 @@ class Adventure {
         for (key: String, dictionary: AnyObject) in storyNodesDictionary {
             storyNodes[key] = StoryNode(dictionary: dictionary as [String : AnyObject], adventure: self)
         }
-        
-        
+                
         // Set the first node
         let startNodeKey = dictionary["startNodeKey"] as String
         startNode = storyNodes[startNodeKey]!
