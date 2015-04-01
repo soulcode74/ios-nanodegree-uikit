@@ -33,7 +33,7 @@ class StoryNodeViewController: UIViewController, UITableViewDelegate, UITableVie
         restartButton.hidden = storyNode.promptCount() > 0
     }
     
-        // MARK: - Table - Place Holder Implementation
+        // MARK: - Table - Place Implementation
     
         func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
@@ -51,6 +51,7 @@ class StoryNodeViewController: UIViewController, UITableViewDelegate, UITableVie
             
     }
     
+        // MARK: - Table - Data Source
     
         func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             
