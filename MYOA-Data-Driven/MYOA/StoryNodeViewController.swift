@@ -37,32 +37,27 @@ class StoryNodeViewController: UIViewController, UITableViewDelegate, UITableVie
     
         func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-            // Selected node prompt
             let selectedNode = storyNode.storyNodeForIndex(indexPath.row)
             
-            // Create a new instance of StoryNodeViewController
             let nodeController = self.storyboard?.instantiateViewControllerWithIdentifier("StoryNodeViewController") as StoryNodeViewController
             
-            // Set the story node of the next view controller to the selected node
             nodeController.storyNode = selectedNode
             
-            // Push the new view controller            
             self.navigationController?.pushViewController(nodeController, animated: true)
-            
-    }
+        }
     
         // MARK: - Table - Data Source
     
         func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             
-            return self.storyNode.promptCount()
+            return storyNode.promptCount()
         }
     
         func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             
             let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell
     
-            cell.textLabel!.text = self.storyNode.promptForIndex(indexPath.row)
+            cell.textLabel!.text = storyNode.promptForIndex(indexPath.row)
             
             return cell
         }
